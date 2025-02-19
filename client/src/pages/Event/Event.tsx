@@ -15,7 +15,7 @@ export const Event: React.FC<EventProps> = ({ title, location, date }) => {
         <div className="event-box">
             <h3>{title}-{location}</h3>
             {date.map((item) => (
-                <VoteResults key={item.timestamp} record={item.record} timestamp={item.timestamp}></VoteResults>
+                <VoteResults key={item.timestamp} records={item.records} timestamp={item.timestamp}></VoteResults>
             ))}
 
         </div>

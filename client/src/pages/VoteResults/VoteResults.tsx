@@ -7,17 +7,17 @@ export type UserRecord = {
 };
 
 export type DateRecord = {
-    timestamp: string;
-    record: UserRecord[];
+    timestamp: number;
+    records: UserRecord[];
 };
 
-export const VoteResults: React.FC<DateRecord> = ({ timestamp, record }) => {
+export const VoteResults: React.FC<DateRecord> = ({ timestamp, records }) => {
 
     return (
         <div className="vote-result">
-            <h4>{timestamp}</h4>
-            {record.map((item) => (
-                <div key={item.name}>{item.name} ({item.answer})</div>
+            <h4>{new Date(timestamp).toLocaleString()}</h4>
+            {records.map((item) => (
+                <div key={`${Math.random()}`}>{item.name} ({item.answer})</div>
             ))}
         </div>
     );
