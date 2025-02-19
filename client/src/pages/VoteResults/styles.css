@@ -1,0 +1,6 @@
+.vote-result {
+    border: 2px solid black;
+    padding: 20px;
+    width: 200px;
+    textAlign: center;
+}
